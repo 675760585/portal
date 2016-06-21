@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.awh</groupId>
+    <artifactId>protal</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.awh</groupId>
+  <artifactId>protal-service-provider</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>protal-service-provider</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+	<dependency>
+		<groupId>com.awh</groupId>
+		<artifactId>protal-service-api</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+
+	</dependency>
+
+	<dependency>
+		<groupId>com.101tec</groupId>
+		<artifactId>zkclient</artifactId>
+		<version>0.4</version>
+	</dependency>
+
+	<dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>dubbo</artifactId>
+		<version>2.5.3</version>
+		<exclusions>  
+            <exclusion>  
+                <artifactId>spring</artifactId>  
+                <groupId>org.springframework</groupId>  
+            </exclusion>  
+        </exclusions>
+	</dependency>
+	
+	<!-- mysql -->
+	<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.3.0</version>
+	</dependency>
+	
+	<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.2.2</version>
+	</dependency>
+	
+	<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.0.20</version>
+	</dependency>
+	
+	<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.25</version>
+	</dependency>
+	
+	
+	<!-- spring  AbstractTest用到了spring容器-->
+	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>4.1.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.batch</groupId>
+			<artifactId>spring-batch-infrastructure</artifactId>
+			<version>2.1.9.RELEASE</version>
+		</dependency>
+		
+		
+		<dependency>
+		    <groupId>commons-dbcp</groupId>
+		    <artifactId>commons-dbcp</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.6</version>
+			<exclusions>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+	
+  </dependencies>
+  
+   <build>
+   		<!-- 该元素设置了项目源码目录，当构建项目的时候，构建系统会编译目录里的源码。该路径是相对于pom.xml的相对路径。 -->
+   		<sourceDirectory>${basedir}/src/main/java/</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources/</directory>
+			</resource>
+		</resources>
+   
+   
+		<plugins>
+				<!-- 代码编译jdk版本 -->
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.2</version>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+				
+				<!-- 打包 拷贝依赖的jar到lib目录并制定main和classpath -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.3.1</version>
+					<configuration>
+						<archive>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<classpathPrefix>lib/</classpathPrefix>
+								<mainClass>org.protal.main.App</mainClass>
+								
+							</manifest>
+						</archive>
+					</configuration>
+				</plugin>
+				
+				<!-- 处理与依赖相关的插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.1</version>
+					<executions>
+						<execution>
+							<id>copy</id>
+							<phase>install</phase>
+							<goals>
+								<goal>copy-dependencies</goal>
+							</goals>
+							<configuration>
+								<!-- 用来指定拷出后Libraries的存放地 -->
+								<outputDirectory>
+									${project.build.directory}/lib
+	                            </outputDirectory>
+	                         
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				  
+				<!-- plugin>
+				    <groupId>org.apache.maven.plugins</groupId>  
+				    <artifactId>maven-shade-plugin</artifactId>  
+				    <version>1.4</version>  
+				    <executions>  
+				      <execution>  
+				        <phase>package</phase>  
+				        <goals>  
+				          <goal>shade</goal>  
+				        </goals>
+				        <configuration>  
+				          <transformers>  
+				            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">  
+				              <mainClass>org.protal.service.provider.App</mainClass>  
+				            </transformer>  
+				          </transformers>  
+				        </configuration>  
+				      </execution>  
+				    </executions>  
+				  </plugin-->
+				  
+		</plugins>
+  </build>
+  
+  	<distributionManagement>
+		<repository>
+			<id>nexus_public</id>
+			<name>nexus_public</name>
+			<url>http://121.41.61.96:8081/nexus/content/groups/public/</url>
+		</repository>
+		<!-- 部署的时候只能部署到Hosted类型的仓库中 ,maven settings,设置用户 -->
+		<snapshotRepository>
+			<id>nexus_snapshots</id>
+			<name>nexus_snapshots</name>
+			<url>http://121.41.61.96:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

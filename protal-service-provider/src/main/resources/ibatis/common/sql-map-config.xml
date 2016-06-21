@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig
+ PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+ "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	<settings useStatementNamespaces="true" />
+    <!-- 弃用了 -->
+	<sqlMap resource="sqlmap/mapping/sqlmap-user.xml" />
+	<sqlMap resource="sqlmap/mapping/sqlmap-menu.xml" />
+	<sqlMap resource="sqlmap/mapping/sqlmap-product.xml" />
+	<sqlMap resource="sqlmap/mapping/sqlmap-role.xml" />
+	<sqlMap resource="sqlmap/mapping/sqlmap-userrole.xml" />
+	<sqlMap resource="sqlmap/mapping/sqlmap-customer.xml" />
+	<sqlMap resource="sqlmap/mapping/sqlmap-cc.xml" />
+	<sqlMap resource="sqlmap/mapping/sqlmap-cv.xml" />
+	<sqlMap resource="sqlmap/mapping/sqlmap-trade.xml" />
+
+</sqlMapConfig>

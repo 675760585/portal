@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.protal.dao.TusersMapper" >
+  <resultMap id="BaseResultMap" type="org.protal.dto.business.Users" >
+    <id column="loginId" property="loginid" jdbcType="INTEGER" />
+    <result column="loginName" property="loginname" jdbcType="VARCHAR" />
+    <result column="loginPwd" property="loginpwd" jdbcType="VARCHAR" />
+    <result column="realName" property="realname" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="CHAR" />
+    <result column="status" property="status" jdbcType="CHAR" />
+    <result column="mobileNo" property="mobileno" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="createDate" property="createdate" jdbcType="TIMESTAMP" />
+    <result column="updateDate" property="updatedate" jdbcType="TIMESTAMP" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    loginId, loginName, loginPwd, realName, type, status, mobileNo, email, createDate, 
+    updateDate, remark
+  </sql>
+  
+  <select id="queryAllUser" resultMap="BaseResultMap"  >
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_user
+  </select>
+  
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from tbl_user
+    where loginId = #{loginid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tbl_user
+    where loginId = #{loginid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.protal.dto.business.Users" >
+    insert into tbl_user (loginId, loginName, loginPwd, 
+      realName, type, status, mobileNo, 
+      email, createDate, updateDate, 
+      remark)
+    values (#{loginid,jdbcType=INTEGER}, #{loginname,jdbcType=VARCHAR}, #{loginpwd,jdbcType=VARCHAR}, 
+      #{realname,jdbcType=VARCHAR}, #{type,jdbcType=CHAR}, #{status,jdbcType=CHAR}, #{mobileno,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{createdate,jdbcType=TIMESTAMP}, #{updatedate,jdbcType=TIMESTAMP}, 
+      #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.protal.dto.business.Users" >
+    insert into tbl_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="loginid != null" >
+        loginId,
+      </if>
+      <if test="loginname != null" >
+        loginName,
+      </if>
+      <if test="loginpwd != null" >
+        loginPwd,
+      </if>
+      <if test="realname != null" >
+        realName,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="mobileno != null" >
+        mobileNo,
+      </if>
+      <if test="email != null" >
+        email,
+      </if>
+      <if test="createdate != null" >
+        createDate,
+      </if>
+      <if test="updatedate != null" >
+        updateDate,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="loginid != null" >
+        #{loginid,jdbcType=INTEGER},
+      </if>
+      <if test="loginname != null" >
+        #{loginname,jdbcType=VARCHAR},
+      </if>
+      <if test="loginpwd != null" >
+        #{loginpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=CHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="mobileno != null" >
+        #{mobileno,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedate != null" >
+        #{updatedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.protal.dto.business.Users" >
+    update tbl_user
+    <set >
+      <if test="loginname != null" >
+        loginName = #{loginname,jdbcType=VARCHAR},
+      </if>
+      <if test="loginpwd != null" >
+        loginPwd = #{loginpwd,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        realName = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=CHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=CHAR},
+      </if>
+      <if test="mobileno != null" >
+        mobileNo = #{mobileno,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        createDate = #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatedate != null" >
+        updateDate = #{updatedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where loginId = #{loginid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.protal.dto.business.Users" >
+    update tbl_user
+    set loginName = #{loginname,jdbcType=VARCHAR},
+      loginPwd = #{loginpwd,jdbcType=VARCHAR},
+      realName = #{realname,jdbcType=VARCHAR},
+      type = #{type,jdbcType=CHAR},
+      status = #{status,jdbcType=CHAR},
+      mobileNo = #{mobileno,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      createDate = #{createdate,jdbcType=TIMESTAMP},
+      updateDate = #{updatedate,jdbcType=TIMESTAMP},
+      remark = #{remark,jdbcType=VARCHAR}
+    where loginId = #{loginid,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -47,7 +47,7 @@ public class IndexController extends BaseController {
 	}
 	
 	/**
-	 * 
+	 * 电影详情页面
 	 * @return
 	 */
 	@RequestMapping("single")
@@ -56,7 +56,7 @@ public class IndexController extends BaseController {
 	}
 	
 	/**
-	 * 
+	 * 电影列表
 	 * @return
 	 */
 	@RequestMapping("movie")

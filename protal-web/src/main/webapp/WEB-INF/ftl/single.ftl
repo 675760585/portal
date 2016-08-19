@@ -4,6 +4,8 @@
 <div class="content">
    <div class="movie_top">
 		 <div class="col-md-9 movie_box">
+				
+				<!--首页和评分 start-->
 				<div class="grid images_3_of_2">
 					<div class="movie_image">
 						<span class="movie_rating">5.0</span>
@@ -32,6 +34,9 @@
 					   <div class="clearfix"> </div>
 					</div>
 				</div>
+				<!--首页和评分 start-->
+				
+				<!--详细介绍 start-->
 				<div class="desc1 span_3_of_2">
 					<p class="movie_option"><strong>国家: </strong><a href="#">established</a>, <a href="#">USA</a></p>
 					<p class="movie_option"><strong>年: </strong>2014</p>
@@ -44,6 +49,9 @@
 				 </div>
 				<div class="clearfix"> </div>
 				<p class="m_4">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.</p>
+				<!--详细介绍 end-->
+				
+				<!--发表框 start-->
 				<form method="post" action="contact-post.html">
 					<div class="to">
 						<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
@@ -57,7 +65,10 @@
 					</div>
 					<div class="clearfix"></div>
 				</form>
-				<div class="single">
+				<!--发表框 end-->
+				
+				<!--评论 start-->
+			  <div class="single">
 				<h1>10 Comments</h1>
 				<ul class="single_list">
 					<li>
@@ -110,8 +121,12 @@
 					</li>
 				</ul>
 			  </div>
-			  </div>
-			  <div class="col-md-3">
+			  <!--评论 end-->
+		</div>
+		
+		
+		<!--右侧悬浮列表 start-->
+		<div class="col-md-3">
 				<div class="movie_img"><div class="grid_2">
 					<img src="images/pic6.jpg" class="img-responsive" alt="">
 					<div class="caption1">
@@ -143,8 +158,10 @@
 						<p class="m_3">Guardians of the Galaxy</p>
 					</div>
 				   </div>
-			   </div> 
-			  <div class="clearfix"> </div>
-		  </div>
+		</div> 
+		<!--右侧悬浮列表 end-->
+		
+		<div class="clearfix"> </div>
+	  </div>
    </div>
  </@header>

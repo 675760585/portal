@@ -6,6 +6,7 @@ import org.portal.dto.business.Users;
 import org.portal.service.AbstractTest;
 import org.portal.service.api.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.ContextLoaderListener;
 
 
 public class UsersServiceTest extends AbstractTest{

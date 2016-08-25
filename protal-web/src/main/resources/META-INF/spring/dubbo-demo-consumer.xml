@@ -22,5 +22,5 @@
 
 	<dubbo:reference id="demoService" interface="com.alibaba.dubbo.demo.DemoService" />
 
-    <dubbo:reference id="userService" interface="org.protal.service.api.UserService"></dubbo:reference>
+    <dubbo:reference id="userService" interface="org.portal.service.api.UserService"></dubbo:reference>
 </beans>

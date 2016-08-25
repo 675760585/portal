@@ -23,10 +23,10 @@
 	<!-- 加载spring配置文件 -->
 	<import resource="../../conf/applicationContext.xml"/>
 	
-	<bean id="demoService" class="org.protal.service.provider.DemoServiceImpl" />
+	<bean id="demoService" class="org.portal.service.provider.DemoServiceImpl" />
 	
-	<dubbo:service interface="org.protal.service.api.DemoService" ref="demoService" />
+	<dubbo:service interface="org.portal.service.api.DemoService" ref="demoService" />
 	
-	<dubbo:service interface="org.protal.service.api.UserService" ref="userService" timeout="60000" ></dubbo:service>
+	<dubbo:service interface="org.portal.service.api.UserService" ref="userService" timeout="60000" ></dubbo:service>
 	
 </beans>

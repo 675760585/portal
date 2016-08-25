@@ -27,5 +27,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry combineaccessrules="false" kind="src" path="/portal-service-api"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

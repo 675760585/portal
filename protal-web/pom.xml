@@ -4,14 +4,14 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.awh</groupId>
-    <artifactId>protal</artifactId>
+    <artifactId>portal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.awh</groupId>
-  <artifactId>protal-web</artifactId>
+  <artifactId>portal-web</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>protal-web Maven Webapp</name>
+  <name>portal-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
   	<!-- dubbo -->
@@ -136,7 +136,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.awh</groupId>
-			<artifactId>protal-service-api</artifactId>
+			<artifactId>portal-service-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
@@ -161,7 +161,7 @@
     
   </dependencies>
   <build>
-    <finalName>protal-web</finalName>
+    <finalName>portal-web</finalName>
     
       
   	<plugins>

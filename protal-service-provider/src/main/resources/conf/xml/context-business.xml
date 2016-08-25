@@ -2,6 +2,6 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
     <!--暂时用注解，要用引用到applicationContext里面-->
-    <bean id="protal.userService" class="org.protal.service.provider.UserServiceImpl"></bean>
+    <bean id="portal.userService" class="org.portal.service.provider.UserServiceImpl"></bean>
     
 </beans>

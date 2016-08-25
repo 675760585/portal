@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.awh</groupId>
-  <artifactId>protal</artifactId>
+  <artifactId>portal</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
@@ -18,9 +18,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <modules>
-    <module>protal-common</module>
-    <module>protal-web</module>
-    <module>protal-service-api</module>
-    <module>protal-service-provider</module>
+    <module>portal-common</module>
+    <module>portal-web</module>
+    <module>portal-service-api</module>
+    <module>portal-service-provider</module>
   </modules>
 </project>

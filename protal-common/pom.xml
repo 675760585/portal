@@ -4,13 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.awh</groupId>
-    <artifactId>protal</artifactId>
+    <artifactId>portal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.awh</groupId>
-  <artifactId>protal-common</artifactId>
+  <artifactId>portal-common</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>protal-common</name>
+  <name>portal-common</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

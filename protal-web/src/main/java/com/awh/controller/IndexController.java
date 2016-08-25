@@ -1,6 +1,6 @@
 package com.awh.controller;
 
-import org.protal.service.api.UserService;
+import org.portal.service.api.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

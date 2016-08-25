@@ -24,12 +24,12 @@
 				<div class="col-sm-3 logo"><a href="index.html"><img src="images/logo.png" alt="" height="55"/></a></div>
 				<div class="col-sm-6 nav">
 				  <ul>
-					 <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="comic"><a href="movie.html"> </a></span></li>
-					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="movie"><a href="movie.html"> </a> </span></li>
-					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="video"><a href="movie.html"> </a></span></li>
-					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="game"><a href="movie.html"> </a></span></li>
-					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="tv"><a href="movie.html"> </a></span></li>
-					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="more"><a href="movie.html"> </a></span></li>
+					 <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="首页"><a href="movie.html"> </a></span></li>
+					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="电影"><a href="movie.html"> </a> </span></li>
+					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="分类"><a href="movie.html"> </a></span></li>
+					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="推荐"><a href="movie.html"> </a></span></li>
+					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="搜索"><a href="movie.html"> </a></span></li>
+					 <li><span class="simptip-position-bottom simptip-movable" data-tooltip="更多"><a href="movie.html"> </a></span></li>
 				 </ul>
 				</div>
 				<div class="col-sm-3 header_right">

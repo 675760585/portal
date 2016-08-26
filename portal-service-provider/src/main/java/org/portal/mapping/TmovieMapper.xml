@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.portal.dao.TmovieMapper" >
+  <resultMap id="BaseResultMap" type="org.portal.dto.business.Tmovie" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="img" property="img" jdbcType="VARCHAR" />
+    <result column="score" property="score" jdbcType="DOUBLE" />
+    <result column="release_time" property="releaseTime" jdbcType="TIMESTAMP" />
+    <result column="title_name" property="titleName" jdbcType="VARCHAR" />
+    <result column="decade" property="decade" jdbcType="VARCHAR" />
+    <result column="country" property="country" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="language" property="language" jdbcType="VARCHAR" />
+    <result column="subtitle" property="subtitle" jdbcType="VARCHAR" />
+    <result column="file_format" property="fileFormat" jdbcType="VARCHAR" />
+    <result column="video_size" property="videoSize" jdbcType="VARCHAR" />
+    <result column="file_size" property="fileSize" jdbcType="VARCHAR" />
+    <result column="length" property="length" jdbcType="VARCHAR" />
+    <result column="director" property="director" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="org.portal.dto.business.TmovieWithBLOBs" extends="BaseResultMap" >
+    <result column="urls" property="urls" jdbcType="LONGVARCHAR" />
+    <result column="starring" property="starring" jdbcType="LONGVARCHAR" />
+    <result column="summary" property="summary" jdbcType="LONGVARCHAR" />
+    <result column="jietu" property="jietu" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, title, img, score, release_time, title_name, decade, country, type, language, 
+    subtitle, file_format, video_size, file_size, length, director
+  </sql>
+  <sql id="Blob_Column_List" >
+    urls, starring, summary, jietu
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_movie
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_movie
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.portal.dto.business.TmovieWithBLOBs" >
+    insert into t_movie (id, title, img, 
+      score, release_time, title_name, 
+      decade, country, type, 
+      language, subtitle, file_format, 
+      video_size, file_size, length, 
+      director, urls, starring, 
+      summary, jietu)
+    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{img,jdbcType=VARCHAR}, 
+      #{score,jdbcType=DOUBLE}, #{releaseTime,jdbcType=TIMESTAMP}, #{titleName,jdbcType=VARCHAR}, 
+      #{decade,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{language,jdbcType=VARCHAR}, #{subtitle,jdbcType=VARCHAR}, #{fileFormat,jdbcType=VARCHAR}, 
+      #{videoSize,jdbcType=VARCHAR}, #{fileSize,jdbcType=VARCHAR}, #{length,jdbcType=VARCHAR}, 
+      #{director,jdbcType=VARCHAR}, #{urls,jdbcType=LONGVARCHAR}, #{starring,jdbcType=LONGVARCHAR}, 
+      #{summary,jdbcType=LONGVARCHAR}, #{jietu,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.portal.dto.business.TmovieWithBLOBs" >
+    insert into t_movie
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="img != null" >
+        img,
+      </if>
+      <if test="score != null" >
+        score,
+      </if>
+      <if test="releaseTime != null" >
+        release_time,
+      </if>
+      <if test="titleName != null" >
+        title_name,
+      </if>
+      <if test="decade != null" >
+        decade,
+      </if>
+      <if test="country != null" >
+        country,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="language != null" >
+        language,
+      </if>
+      <if test="subtitle != null" >
+        subtitle,
+      </if>
+      <if test="fileFormat != null" >
+        file_format,
+      </if>
+      <if test="videoSize != null" >
+        video_size,
+      </if>
+      <if test="fileSize != null" >
+        file_size,
+      </if>
+      <if test="length != null" >
+        length,
+      </if>
+      <if test="director != null" >
+        director,
+      </if>
+      <if test="urls != null" >
+        urls,
+      </if>
+      <if test="starring != null" >
+        starring,
+      </if>
+      <if test="summary != null" >
+        summary,
+      </if>
+      <if test="jietu != null" >
+        jietu,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null" >
+        #{img,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=DOUBLE},
+      </if>
+      <if test="releaseTime != null" >
+        #{releaseTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="titleName != null" >
+        #{titleName,jdbcType=VARCHAR},
+      </if>
+      <if test="decade != null" >
+        #{decade,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null" >
+        #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="language != null" >
+        #{language,jdbcType=VARCHAR},
+      </if>
+      <if test="subtitle != null" >
+        #{subtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="fileFormat != null" >
+        #{fileFormat,jdbcType=VARCHAR},
+      </if>
+      <if test="videoSize != null" >
+        #{videoSize,jdbcType=VARCHAR},
+      </if>
+      <if test="fileSize != null" >
+        #{fileSize,jdbcType=VARCHAR},
+      </if>
+      <if test="length != null" >
+        #{length,jdbcType=VARCHAR},
+      </if>
+      <if test="director != null" >
+        #{director,jdbcType=VARCHAR},
+      </if>
+      <if test="urls != null" >
+        #{urls,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="starring != null" >
+        #{starring,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="summary != null" >
+        #{summary,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="jietu != null" >
+        #{jietu,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.portal.dto.business.TmovieWithBLOBs" >
+    update t_movie
+    <set >
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null" >
+        img = #{img,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        score = #{score,jdbcType=DOUBLE},
+      </if>
+      <if test="releaseTime != null" >
+        release_time = #{releaseTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="titleName != null" >
+        title_name = #{titleName,jdbcType=VARCHAR},
+      </if>
+      <if test="decade != null" >
+        decade = #{decade,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null" >
+        country = #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="language != null" >
+        language = #{language,jdbcType=VARCHAR},
+      </if>
+      <if test="subtitle != null" >
+        subtitle = #{subtitle,jdbcType=VARCHAR},
+      </if>
+      <if test="fileFormat != null" >
+        file_format = #{fileFormat,jdbcType=VARCHAR},
+      </if>
+      <if test="videoSize != null" >
+        video_size = #{videoSize,jdbcType=VARCHAR},
+      </if>
+      <if test="fileSize != null" >
+        file_size = #{fileSize,jdbcType=VARCHAR},
+      </if>
+      <if test="length != null" >
+        length = #{length,jdbcType=VARCHAR},
+      </if>
+      <if test="director != null" >
+        director = #{director,jdbcType=VARCHAR},
+      </if>
+      <if test="urls != null" >
+        urls = #{urls,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="starring != null" >
+        starring = #{starring,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="summary != null" >
+        summary = #{summary,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="jietu != null" >
+        jietu = #{jietu,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="org.portal.dto.business.TmovieWithBLOBs" >
+    update t_movie
+    set title = #{title,jdbcType=VARCHAR},
+      img = #{img,jdbcType=VARCHAR},
+      score = #{score,jdbcType=DOUBLE},
+      release_time = #{releaseTime,jdbcType=TIMESTAMP},
+      title_name = #{titleName,jdbcType=VARCHAR},
+      decade = #{decade,jdbcType=VARCHAR},
+      country = #{country,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      language = #{language,jdbcType=VARCHAR},
+      subtitle = #{subtitle,jdbcType=VARCHAR},
+      file_format = #{fileFormat,jdbcType=VARCHAR},
+      video_size = #{videoSize,jdbcType=VARCHAR},
+      file_size = #{fileSize,jdbcType=VARCHAR},
+      length = #{length,jdbcType=VARCHAR},
+      director = #{director,jdbcType=VARCHAR},
+      urls = #{urls,jdbcType=LONGVARCHAR},
+      starring = #{starring,jdbcType=LONGVARCHAR},
+      summary = #{summary,jdbcType=LONGVARCHAR},
+      jietu = #{jietu,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.portal.dto.business.Tmovie" >
+    update t_movie
+    set title = #{title,jdbcType=VARCHAR},
+      img = #{img,jdbcType=VARCHAR},
+      score = #{score,jdbcType=DOUBLE},
+      release_time = #{releaseTime,jdbcType=TIMESTAMP},
+      title_name = #{titleName,jdbcType=VARCHAR},
+      decade = #{decade,jdbcType=VARCHAR},
+      country = #{country,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      language = #{language,jdbcType=VARCHAR},
+      subtitle = #{subtitle,jdbcType=VARCHAR},
+      file_format = #{fileFormat,jdbcType=VARCHAR},
+      video_size = #{videoSize,jdbcType=VARCHAR},
+      file_size = #{fileSize,jdbcType=VARCHAR},
+      length = #{length,jdbcType=VARCHAR},
+      director = #{director,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

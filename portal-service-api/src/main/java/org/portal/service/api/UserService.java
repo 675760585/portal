@@ -8,7 +8,7 @@ import org.portal.dto.business.Users;
  * @Title UserService.java 
  * @Package com.usuch.service.service
  * @Description 登陆相关服务
- * @author lei.jiang 
+ * @author 
  * @date 2015-2-15 下午11:02:15 
  * @version 
  */

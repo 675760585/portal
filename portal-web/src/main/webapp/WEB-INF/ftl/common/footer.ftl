@@ -8,7 +8,7 @@
 		<div class="gp-container">
             <div class="footer-widget footer-1">
             	<div class="wpb_wrapper">
-					<img src="images/f_logo.png" alt=""/>
+					就这样 爱电影
 				</div> 
 	          <br>
 	          <p>关于我们 你是否讨厌广告?  你是否讨厌伪链接?  那这里就属于你...</p>

@@ -19,7 +19,7 @@ public class IndexController extends BaseController {
 	 * @return
 	 */
 	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/index")
-	public ModelAndView  queryUserInfo() {
+	public ModelAndView  index() {
 //		List<Users> list=userService.queryAllUser();
 //		for(Users user:list){
 //			System.out.println("用户名称:"+user.getLoginname());

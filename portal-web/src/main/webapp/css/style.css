@@ -595,8 +595,7 @@ h1.m_2{
 }
 ul.list_3{
 	position: absolute;
-	top:-184px;
-	left: 15px;
+	top:-305px;
 	width:100%;
 }
 ul.list_3 li p, ul.list_5 li p{
@@ -610,8 +609,8 @@ height: 20px;
 background: url(../images/img_sprite.png) -85px -46px;
 display: inline-block;
 position: absolute;
-top: -184px;
-right: 15px;
+top: -305px;
+right: 49px;
 
 }
 i.icon5 {
@@ -626,7 +625,7 @@ p.m_3{
 top: -30px;
 color: #fff;
 font-size: 1.1em;
-width: 100%;
+width: 83%;
 
 text-align: center;
 }

@@ -77,128 +77,143 @@
 		<div class="box_2">
 			
 			<!--left  start-->
-			<div class="col-md-5 grid_3">
+			<div class="col-md-12 grid_3">
+			
+			  <!--left  top start-->
 			  <div class="row_1">
-			  <div class="col-md-6 grid_4"><a href="single.html">
-				  <div class="grid_2">
-					<img src="images/pic1.jpg" class="img-responsive" alt=""/>
-					<div class="caption1">
-						<ul class="list_3">
-				    		<li><i class="icon5"> </i><p>3,548</p></li>
-				    	</ul>
-				    	<i class="icon4"> </i>
-				    	<p class="m_3">电影名称</p>
-					</div>
+					
+				  <!--遍历开始 start-->	
+				  <div class="grid_4 col-md-3" >
+				  
+					<a href="single.html">
+					  <div class="grid_2">
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-285aa4ec6e0e064e1ef8169d736648de" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<div class="caption1">
+							<ul class="list_3">
+								<li><i class="icon5"> </i><p>3,548</p></li>
+							</ul>
+							
+							<p class="m_3">电影名称</p>
+						</div>
+					   </div>
+					</a>
+					
+				    <a href="single.html">
+					   <div class="grid_2 col_1">
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-5b5491eb674a274cc59a1b67fbc4498b" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<div class="caption1">
+							<ul class="list_3">
+								<li><i class="icon5"> </i><p>3,548</p></li>
+							</ul>
+							
+							<p class="m_3">电影名称</p>
+						</div>
+					   </div>
+				   </a>
 				   </div>
-				   <div class="grid_2 col_1">
-					<img src="images/pic2.jpg" class="img-responsive" alt=""/>
-					<div class="caption1">
-						<ul class="list_3">
-				    		<li><i class="icon5"> </i><p>3,548</p></li>
-				    	</ul>
-				    	<i class="icon4"> </i>
-				    	<p class="m_3">电影名称</p>
-					</div>
+				   <!--遍历开始 end-->	
+				   
+				  <div class="grid_4 col-md-3" >
+				  
+					<a href="single.html">
+					  <div class="grid_2">
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-285aa4ec6e0e064e1ef8169d736648de" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<div class="caption1">
+							<ul class="list_3">
+								<li><i class="icon5"> </i><p>3,548</p></li>
+							</ul>
+						
+							<p class="m_3">电影名称</p>
+						</div>
+					   </div>
+					</a>
+					
+				    <a href="single.html">
+					   <div class="grid_2 col_1">
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-5b5491eb674a274cc59a1b67fbc4498b" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<div class="caption1">
+							<ul class="list_3">
+								<li><i class="icon5"> </i><p>3,548</p></li>
+							</ul>
+						
+							<p class="m_3">电影名称</p>
+						</div>
+					   </div>
+				   </a>
 				   </div>
-			   </a></div>
-			   <div class="col-md-6 grid_7">
-				   <div class="col_2">
-				   	    <ul class="list_4">
-			    			<li><i class="icon1"> </i><p>2,548</p></li>
-			    			<li><i class="icon2"> </i><p>215</p></li>
-			    			<li><i class="icon3"> </i><p>546</p></li>
-			    			<li>评分 : &nbsp;&nbsp;<p><img src="images/rating1.png" alt=""/></p></li>
-			    			<li>发布日期 : &nbsp;<span class="m_4">Mar 15, 2015</span> </li>
-			    			<div class="clearfix"> </div>
-			    		</ul>
-			    		<div class="m_5"><a href="single.html"><img src="images/pic3.jpg" class="img-responsive" alt=""/></a></div>
+				   
+				   
+				  <div class="grid_4 col-md-3" >
+				  
+					<a href="single.html">
+					  <div class="grid_2">
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-285aa4ec6e0e064e1ef8169d736648de" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<div class="caption1">
+							<ul class="list_3">
+								<li><i class="icon5"> </i><p>3,548</p></li>
+							</ul>
+							
+							<p class="m_3">电影名称</p>
+						</div>
+					   </div>
+					</a>
+					
+				    <a href="single.html">
+					   <div class="grid_2 col_1">
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-5b5491eb674a274cc59a1b67fbc4498b" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<div class="caption1">
+							<ul class="list_3">
+								<li><i class="icon5"> </i><p>3,548</p></li>
+							</ul>
+							
+							<p class="m_3">电影名称</p>
+						</div>
+					   </div>
+				   </a>
 				   </div>
-			 </div>
-			   <div class="clearfix"> </div>
+				   
+				  <div class="grid_4 col-md-3" >
+				  
+					<a href="single.html">
+					  <div class="grid_2">
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-285aa4ec6e0e064e1ef8169d736648de" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<div class="caption1">
+							<ul class="list_3">
+								<li><i class="icon5"> </i><p>3,548</p></li>
+							</ul>
+							
+							<p class="m_3">电影名称</p>
+						</div>
+					   </div>
+					</a>
+					
+				    <a href="single.html">
+					   <div class="grid_2 col_1">
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-5b5491eb674a274cc59a1b67fbc4498b" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<div class="caption1">
+							<ul class="list_3">
+								<li><i class="icon5"> </i><p>3,548</p></li>
+							</ul>
+							
+							<p class="m_3">电影名称</p>
+						</div>
+					   </div>
+				   </a>
+				   </div>
+				   <div class="clearfix"> </div>
 			   </div>
+			   <!--left  top end-->
+			   
 			   <div class="row_2">
-			   	<a href="single.html"><img src="images/pic4.jpg" class="img-responsive" alt=""/></a>
+			   	<a href="single.html" style="float:left;"><img src="images/pic4.jpg" class="img-responsive" alt="" /></a>
+			   	<a href="single.html" style="float:right;"><img src="images/pic4.jpg" class="img-responsive" alt=""/></a>
 			   </div>
+			   
 			</div>
 			<!--left  end-->
 			
 			
-			<!--in start-->
-			<div class="col-md-5 content_right">
-			 <div class="row_3">
-			  <div class="col-md-6 content_right-box"><a href="single.html">
-				<div class="grid_2">
-				<img src="images/pic6.jpg" class="img-responsive" alt=""/>
-				<div class="caption1">
-						<ul class="list_5">
-				    		<li><i class="icon5"> </i><p>3,548</p></li>
-				    	</ul>
-				    	<i class="icon4 icon6"> </i>
-				    	<p class="m_3">电影名称</p>
-				</div>
-			    </div>
-			   </a></div>
-			   <div class="col-md-6 grid_5"><a href="single.html">
-				<div class="grid_2">
-				<img src="images/pic7.jpg" class="img-responsive" alt=""/>
-				<div class="caption1">
-						<ul class="list_5">
-				    		<li><i class="icon5"> </i><p>3,548</p></li>
-				    	</ul>
-				    	<i class="icon4 icon6"> </i>
-				    	<p class="m_3">电影名称</p>
-				</div>
-			    </div>
-			   </a></div>
-			   <div class="clearfix"> </div>
-			   </div>
-			   <div class="video">
-			      video
-			  </div>
-			  <div class="row_5">
-			  	<div class="col-md-6">
-					<div class="col_2">
-				   	    <ul class="list_4">
-			    			<li><i class="icon1"> </i><p>2,548</p></li>
-			    			<li><i class="icon2"> </i><p>215</p></li>
-			    			<li><i class="icon3"> </i><p>546</p></li>
-			    			<li>评分 : &nbsp;&nbsp;<p><img src="images/rating1.png" alt=""></p></li>
-			    			<div class="clearfix"> </div>
-			    		</ul>
-			    		
-				   </div>
-			   </div>
-			   <div class="col-md-6 m_6"><a href="single.html">
-				  <img src="images/pic8.jpg" class="img-responsive" alt=""/>
-			   </a></div>
-			  </div>
-			</div>
-			<!--in end-->
 			
-			
-			<!--right start-->
-			<div class="col-md-2 grid_6">
-				<div class="m_7"><a href="single.html"><img src="images/pic9.jpg" class="img-responsive" alt=""/></a></div>
-				<div class="caption1">
-						<ul class="list_5">
-				    		<li><i class="icon5"> </i><p>3,548</p></li>
-				    	</ul>
-				    	<i class="icon4 icon6"> </i>
-				    	<p class="m_3">电影名称</p>
-				</div>
-				<div class="col_2 col_3">
-				   	    <ul class="list_4">
-			    			<li><i class="icon1"> </i><p>2,548</p></li>
-			    			<li><i class="icon2"> </i><p>215</p></li>
-			    			<li><i class="icon3"> </i><p>546</p></li>
-			    			<li>评分 : &nbsp;&nbsp;<p><img src="images/rating1.png" alt=""></p></li>
-			    			<li>Release : &nbsp;<span class="m_4">Mar 15, 2015</span> </li>
-			    			<div class="clearfix"> </div>
-			    		</ul>
-			    		<div class="m_8"><a href="single.html"><img src="images/pic10.jpg" class="img-responsive" alt=""/></a></div>
-			    </div>
-			</div>
-			<!--right end--->
 			
 			<div class="clearfix"> </div>
 		</div>

@@ -29,6 +29,15 @@ public class IndexController extends BaseController {
 	}
 	
 	/**
+	 * 分页页面
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/sort")
+	public ModelAndView  sort() {
+		return new ModelAndView("sort");
+	}
+	
+	/**
 	 * 登入
 	 * @return
 	 */

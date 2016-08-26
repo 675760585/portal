@@ -62,7 +62,7 @@
 		
 		<!--标题&搜索 start-->
       	<div class="box_1">
-      	 <h1 class="m_2">电影精选</h1>
+      	 <h1 class="m_2">最新电影</h1>
       	 <div class="search">
 		    <form>
 				<input type="text" value="Search..." onFocus="this.value='';" onBlur="if (this.value == '') {this.value ='';}">
@@ -87,7 +87,7 @@
 				  
 					<a href="single.html">
 					  <div class="grid_2">
-						<img src="http://oceqbz8la.bkt.clouddn.com/20192-285aa4ec6e0e064e1ef8169d736648de" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-f8460d3aa7cb0f3c230e2bdce18a49b4" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
 						<div class="caption1">
 							<ul class="list_3">
 								<li><i class="icon5"> </i><p>3,548</p></li>
@@ -100,7 +100,7 @@
 					
 				    <a href="single.html">
 					   <div class="grid_2 col_1">
-						<img src="http://oceqbz8la.bkt.clouddn.com/20192-5b5491eb674a274cc59a1b67fbc4498b" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-4999ffb23b6a063e52f1d15eaac78d48" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
 						<div class="caption1">
 							<ul class="list_3">
 								<li><i class="icon5"> </i><p>3,548</p></li>
@@ -117,7 +117,7 @@
 				  
 					<a href="single.html">
 					  <div class="grid_2">
-						<img src="http://oceqbz8la.bkt.clouddn.com/20192-285aa4ec6e0e064e1ef8169d736648de" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-89ad77361c6fe2cac5b673f5778f0bfe" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
 						<div class="caption1">
 							<ul class="list_3">
 								<li><i class="icon5"> </i><p>3,548</p></li>
@@ -130,7 +130,7 @@
 					
 				    <a href="single.html">
 					   <div class="grid_2 col_1">
-						<img src="http://oceqbz8la.bkt.clouddn.com/20192-5b5491eb674a274cc59a1b67fbc4498b" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-736ee3880fde0e42273c1a47fa22486b" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
 						<div class="caption1">
 							<ul class="list_3">
 								<li><i class="icon5"> </i><p>3,548</p></li>
@@ -147,7 +147,7 @@
 				  
 					<a href="single.html">
 					  <div class="grid_2">
-						<img src="http://oceqbz8la.bkt.clouddn.com/20192-285aa4ec6e0e064e1ef8169d736648de" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-770c4c3ac81376269520597ba544e05c" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
 						<div class="caption1">
 							<ul class="list_3">
 								<li><i class="icon5"> </i><p>3,548</p></li>
@@ -160,7 +160,7 @@
 					
 				    <a href="single.html">
 					   <div class="grid_2 col_1">
-						<img src="http://oceqbz8la.bkt.clouddn.com/20192-5b5491eb674a274cc59a1b67fbc4498b" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-66aad2bf9f9357f0c2163c0ac6eccc9c" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
 						<div class="caption1">
 							<ul class="list_3">
 								<li><i class="icon5"> </i><p>3,548</p></li>
@@ -176,7 +176,7 @@
 				  
 					<a href="single.html">
 					  <div class="grid_2">
-						<img src="http://oceqbz8la.bkt.clouddn.com/20192-285aa4ec6e0e064e1ef8169d736648de" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-9011252399e667820a4f7524733ad646" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
 						<div class="caption1">
 							<ul class="list_3">
 								<li><i class="icon5"> </i><p>3,548</p></li>
@@ -189,7 +189,7 @@
 					
 				    <a href="single.html">
 					   <div class="grid_2 col_1">
-						<img src="http://oceqbz8la.bkt.clouddn.com/20192-5b5491eb674a274cc59a1b67fbc4498b" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
+						<img src="http://oceqbz8la.bkt.clouddn.com/20192-5046887e9ad5b042574f5bfffa5bd9c1" class="img-responsive" alt="" style="width:83%; height:305px !important;" />
 						<div class="caption1">
 							<ul class="list_3">
 								<li><i class="icon5"> </i><p>3,548</p></li>

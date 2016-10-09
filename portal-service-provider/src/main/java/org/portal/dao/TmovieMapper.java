@@ -1,5 +1,7 @@
 package org.portal.dao;
 
+import java.util.List;
+
 import org.portal.dto.business.Tmovie;
 import org.portal.dto.business.TmovieWithBLOBs;
 
@@ -17,4 +19,6 @@ public interface TmovieMapper {
     int updateByPrimaryKeyWithBLOBs(TmovieWithBLOBs record);
 
     int updateByPrimaryKey(Tmovie record);
+    
+    List<TmovieWithBLOBs> selectAllMovie();
 }

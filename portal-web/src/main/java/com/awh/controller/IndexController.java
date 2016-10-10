@@ -15,7 +15,7 @@ public class IndexController extends BaseController {
 	private UserService userService;
 	
 	/**
-	 * 首页
+	 * web-首页
 	 * @return
 	 */
 	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/index")
@@ -28,8 +28,12 @@ public class IndexController extends BaseController {
 		return new ModelAndView("index");
 	}
 	
+	
+	
+	
 	/**
-	 * 分页页面
+	 * 登入
+	 * web-分页页面
 	 * @return
 	 */
 	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/sort")
@@ -38,7 +42,7 @@ public class IndexController extends BaseController {
 	}
 	
 	/**
-	 * 登入
+	 * web-登入
 	 * @return
 	 */
 	@RequestMapping("login")
@@ -47,7 +51,7 @@ public class IndexController extends BaseController {
 	}
 	
 	/**
-	 * 注册
+	 * web-注册
 	 * @return
 	 */
 	@RequestMapping("register")
@@ -56,7 +60,7 @@ public class IndexController extends BaseController {
 	}
 	
 	/**
-	 * 电影详情页面
+	 * web-电影详情页面
 	 * @return
 	 */
 	@RequestMapping("single")
@@ -65,12 +69,67 @@ public class IndexController extends BaseController {
 	}
 	
 	/**
-	 * 电影列表
+	 * web-电影列表
 	 * @return
 	 */
 	@RequestMapping("movie")
 	public ModelAndView movie(){
 		return new ModelAndView("movie");
+	}
+	
+	/**
+	 * m站-首页
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-index")
+	public ModelAndView  mindex() {
+		return new ModelAndView("m/index");
+	}
+	
+	/**
+	 * m站-关于
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-about")
+	public ModelAndView  mabout() {
+		return new ModelAndView("m/about");
+	}
+	
+	/**
+	 * m站-最新影讯
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-news")
+	public ModelAndView  newsMovie() {
+		return new ModelAndView("m/news");
+	}
+	
+	/**
+	 * m站-分类
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-sort")
+	public ModelAndView  msort() {
+		return new ModelAndView("m/sort");
+	}
+	
+	
+	/**
+	 * m站-分享
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-share")
+	public ModelAndView  mshare() {
+		return new ModelAndView("m/share");
+	}
+	
+	/**
+	 * m站-留言板
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-comments")
+	public ModelAndView  mcomments() {
+		return new ModelAndView("m/comments");
 	}
 	
 }

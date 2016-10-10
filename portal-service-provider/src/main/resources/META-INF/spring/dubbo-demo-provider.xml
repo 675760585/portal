@@ -29,4 +29,6 @@
 	
 	<dubbo:service interface="org.portal.service.api.UserService" ref="userService" timeout="60000" ></dubbo:service>
 	
+	<dubbo:service interface="org.portal.service.api.MovieService" ref="movieService" timeout="60000" ></dubbo:service>
+	
 </beans>

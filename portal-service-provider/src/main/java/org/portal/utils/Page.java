@@ -1,5 +1,6 @@
 package org.portal.utils;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,7 +8,7 @@ import java.util.Map;
 /**
  * 对分页的基本数据进行一个简单的封装
  */
-public class Page<T> {
+public class Page<T> implements Serializable{
 	private int pageNo = 1;// 页码，默认是第一页
 	private int pageSize = 10;// 每页显示的记录数，默认是10
 	private int totalRecord;// 总记录数

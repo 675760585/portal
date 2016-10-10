@@ -23,11 +23,11 @@
 			<div id="header">
 				<a href="#menu"></a>
 				<span id="Logo" class="svg">
-					<img src="m/m-images/logo.svg" />
+					就这样-爱电影
 				</span>
 				<a class="backBtn" href="javascript:history.back();"></a>
 			</div>
-			<div class="subHeader"><i class="i-about i-small"></i>Ocean/About</div>
+			<div class="subHeader"><i class="i-about i-small"></i>关于我们</div>
 			<div id="content">
 				
 				<div class="o-team">
@@ -35,7 +35,7 @@
 						<img src="m/m-images/team/1-th.jpg" />
 						<h4>John Doe</h4>
 						<div class="h-line50"></div>
-						<p><span class="c-red">Lorem ipsum</span> is simply dummy text</p>
+						<p><span class="c-red">admin</span> is simply dummy text</p>
 						<div class="o-person-content">
 							<img src="m/m-images/team/1.jpg" />
 							<h4>John Doe</h4>
@@ -135,45 +135,46 @@
 
 			</div>
 			<div class="block">
-				Explore our site
+				搜索我们的网站
 			</div>
 			
 			<div class="exploreSiteFullPane">
-				<a href="index.html" class="explorePane">
+				
+				<a href="#" class="explorePane active">
 					<span class="i-pane i-blue">
 						<i class="i-home"></i>
 					</span>
-					<h4>Home</h4>
+					<h4>首页</h4>
 				</a>
-				<a href="#" class="explorePane active middle">
+				<a href="about.html" class="explorePane middle">
 					<span class="i-pane i-blue">
 						<i class="i-about"></i>
 					</span>
-					<h4>About</h4>
+					<h4>关于</h4>
 				</a>
 				<a href="blog.html" class="explorePane">
 					<span class="i-pane i-blue">
 						<i class="i-blog"></i>
 					</span>
-					<h4>Blog</h4>
+					<h4>影讯</h4>
 				</a>
 				<a href="gallery.html" class="explorePane">
 					<span class="i-pane i-blue">
-						<i class="i-gallery"></i>
+						<i class="i-shortcodes"></i>
 					</span>
-					<h4>Gallery</h4>
+					<h4>分类</h4>
 				</a>
 				<a href="shortcodes.html" class="explorePane middle">
 					<span class="i-pane i-blue">
-						<i class="i-shortcodes"></i>
+						<i class="i-gallery"></i>
 					</span>
-					<h4>Shortcodes</h4>
+					<h4>分享</h4>
 				</a>
 				<a href="contact.html" class="explorePane">
 					<span class="i-pane i-blue">
 						<i class="i-contact"></i>
 					</span>
-					<h4>Contact</h4>
+					<h4>留言</h4>
 				</a>
 			</div>
 			

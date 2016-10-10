@@ -3,6 +3,7 @@ package org.portal.service.api;
 import java.util.List;
 
 import org.portal.dto.business.TmovieWithBLOBs;
+import org.portal.utils.Page;
 
 /**   
  * @Title MovieService.java 
@@ -13,4 +14,8 @@ import org.portal.dto.business.TmovieWithBLOBs;
  */
 public interface MovieService {
 	public List<TmovieWithBLOBs> selectAllMovie();
+	
+	
+	public Page<TmovieWithBLOBs> selectPageMovie(Page page);
+	
 }

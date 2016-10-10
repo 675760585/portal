@@ -1,7 +1,9 @@
 package org.portal.service.provider;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.portal.dto.business.Tmovie;
 import org.portal.dto.business.TmovieWithBLOBs;
@@ -9,6 +11,7 @@ import org.portal.dto.business.Users;
 import org.portal.service.AbstractTest;
 import org.portal.service.api.MovieService;
 import org.portal.service.api.UserService;
+import org.portal.utils.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -45,6 +48,18 @@ public class UsersServiceTest extends AbstractTest{
 		for(String s :str){
 			System.out.println(s);
 		}
+		
+	}
+	
+	
+	public void test1(){
+		Map<String, Object> map=new HashMap<String, Object>();
+		List<String> str=new ArrayList<String>();
+		Page page=new Page(Integer.MAX_VALUE-1);
+		map.put("type", "冒险");
+		page.setParams(map);
+		Page<TmovieWithBLOBs> list=movieService.selectPageMovie(page);
+		System.out.println(list.getResults().size());
 		
 	}
 	

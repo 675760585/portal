@@ -16,12 +16,6 @@
 						<a href="m-news">
 							<i class="i-blog  i-small"></i>最新影讯
 						</a>
-						<ul>
-							<li><a href="blog-single-post.html">First Post</a></li>
-							<li>
-								<a href="blog-single-post.html">Second Post</a>
-							</li>
-						</ul>
 					</li>
 					<li>
 						<a href="m-sort">

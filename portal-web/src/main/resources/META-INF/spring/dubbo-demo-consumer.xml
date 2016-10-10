@@ -23,4 +23,6 @@
 	<dubbo:reference id="demoService" interface="org.portal.service.api.DemoService" />
 
     <dubbo:reference id="userService" interface="org.portal.service.api.UserService"></dubbo:reference>
+    
+    <dubbo:reference id="movieService" interface="org.portal.service.api.MovieService"></dubbo:reference>
 </beans>

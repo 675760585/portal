@@ -1,7 +1,14 @@
 package org.portal.dto.business;
 
-public class TmovieWithBLOBs extends Tmovie {
-    private String urls;
+import java.io.Serializable;
+
+public class TmovieWithBLOBs extends Tmovie implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -1635009398727444542L;
+
+	private String urls;
 
     private String starring;
 

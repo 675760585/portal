@@ -23,7 +23,7 @@
 			<div id="header">
 				<a href="#menu"></a>
 				<span id="Logo" class="svg">
-					<img src="m/m-images/logo.svg" />
+					就这样-爱电影
 				</span>
 				<a class="backBtn" href="javascript:history.back();"></a>
 			</div>

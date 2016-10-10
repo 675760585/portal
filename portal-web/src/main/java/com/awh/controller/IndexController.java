@@ -1,10 +1,18 @@
 package com.awh.controller;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.portal.dto.business.TmovieWithBLOBs;
+import org.portal.service.api.MovieService;
 import org.portal.service.api.UserService;
+import org.portal.utils.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -13,6 +21,9 @@ public class IndexController extends BaseController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private MovieService movieService;
 	
 	/**
 	 * web-首页
@@ -101,7 +112,8 @@ public class IndexController extends BaseController {
 	 */
 	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-news")
 	public ModelAndView  newsMovie() {
-		return new ModelAndView("m/news");
+		Page<TmovieWithBLOBs> page=movieService.selectPageMovie(new Page(5));
+		return new ModelAndView("m/news").addObject("movieItem", page.getResults());
 	}
 	
 	/**
@@ -109,8 +121,13 @@ public class IndexController extends BaseController {
 	 * @return
 	 */
 	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-sort")
-	public ModelAndView  msort() {
-		return new ModelAndView("m/sort");
+	public ModelAndView  msort(@RequestParam String type) {
+		Page pages=new Page(Integer.MAX_VALUE-1);
+		Map<String,Object> param=new HashMap<String,Object>();
+		param.put("type", type);
+		pages.setParams(param);
+		Page<TmovieWithBLOBs> page=movieService.selectPageMovie(pages);
+		return new ModelAndView("m/sort").addObject("typeItem", page.getResults());
 	}
 	
 	

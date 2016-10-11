@@ -24,7 +24,7 @@ $(function(){
 				
 	//---------------------------------------------------------------------- Gallery
 	if($("#Gallery").length != 0) {
-		$("#Gallery a").photoSwipe();
+		//$("#Gallery a").photoSwipe();
 	}
 	
 	

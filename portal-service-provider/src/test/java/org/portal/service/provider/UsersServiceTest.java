@@ -56,7 +56,7 @@ public class UsersServiceTest extends AbstractTest{
 		Map<String, Object> map=new HashMap<String, Object>();
 		List<String> str=new ArrayList<String>();
 		Page page=new Page(Integer.MAX_VALUE-1);
-		map.put("type", "冒险");
+		map.put("type", "动作");
 		page.setParams(map);
 		Page<TmovieWithBLOBs> list=movieService.selectPageMovie(page);
 		System.out.println(list.getResults().size());

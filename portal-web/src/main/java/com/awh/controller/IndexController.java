@@ -1,9 +1,10 @@
 package com.awh.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang.StringUtils;
 import org.portal.dto.business.TmovieWithBLOBs;
 import org.portal.service.api.MovieService;
 import org.portal.service.api.UserService;
@@ -13,7 +14,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import com.awh.enums.MovieTypeEnums;
 
 @Controller
 public class IndexController extends BaseController {
@@ -119,17 +122,52 @@ public class IndexController extends BaseController {
 	/**
 	 * m站-分类
 	 * @return
+	 * @throws UnsupportedEncodingException 
 	 */
 	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-sort")
-	public ModelAndView  msort(@RequestParam String type) {
-		Page pages=new Page(Integer.MAX_VALUE-1);
+	public ModelAndView  msort(@RequestParam String type) throws UnsupportedEncodingException {
+		ModelAndView view=new ModelAndView("m/sort");
+		Page pages=new Page(5);
 		Map<String,Object> param=new HashMap<String,Object>();
-		param.put("type", type);
+		if(!StringUtils.isEmpty(type)){
+			param.put("type",MovieTypeEnums.getByValue(type).getView());
+			view.addObject("type",MovieTypeEnums.getByValue(type).getView());
+			view.addObject("code", type);
+		}
 		pages.setParams(param);
 		Page<TmovieWithBLOBs> page=movieService.selectPageMovie(pages);
-		return new ModelAndView("m/sort").addObject("typeItem", page.getResults());
+		view.addObject("typeItem", page.getResults());
+		return view;
 	}
 	
+	
+	/**
+	 * m站-分类json 数据
+	 * @return
+	 * @throws UnsupportedEncodingException 
+	 */
+	@ResponseBody
+	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-sort-json")
+	public void  msort_json(@RequestParam String type,@RequestParam int pageNo) throws UnsupportedEncodingException {
+		Map<String,Object> map = new HashMap<String,Object>();
+		Page pages=new Page();
+		pages.setPageNo(pageNo);  //设置页码
+		
+		Map<String,Object> param=new HashMap<String,Object>();
+		param.put("type",MovieTypeEnums.getByValue(type).getView());
+		pages.setParams(param);
+		Page<TmovieWithBLOBs> page=movieService.selectPageMovie(pages);
+		
+		map.put("code", type);
+		map.put("pageNo", pageNo);
+		map.put("typeItem", page.getResults());
+		if(page.getResults()==null &&page.getResults().size()==0){
+			map.put("success","false");
+		}else{
+			map.put("success","true");
+		}
+		writeJson(map);
+	}
 	
 	/**
 	 * m站-分享

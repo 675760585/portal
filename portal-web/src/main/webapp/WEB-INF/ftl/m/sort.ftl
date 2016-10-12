@@ -36,13 +36,9 @@
 			<div id="content">
 				<#if (typeItem?? && typeItem?size>0) >
 					<#list typeItem as item>
-						 <div class="columns twelve">
+						 <div class="columns twelve" style="overflow:hidden;white-space:nowrap;text-overflow: ellipsis;">
 									<a href="/i/97299.html" title="${item.title!}">
-										<#if item.title?has_content && item.title?length gt 24 >
-											${item.title?substring(0,24)}..
-										<#else>
-											${item.title!}
-										</#if>
+										${item.title!}
 									</a>
 						 </div>
 				  		 <hr>
@@ -50,12 +46,15 @@
 				</#if>
 				
 			</div>
+			<div style="height:50px;line-height:10px;text-align:center;" class="load_refresh">上拉加载更多</div>
+			  
 			<a href='#' onclick='gotoTop();return false;' class='totop' style='display:none'></a>
 			<div class="subFooter">Copyright 2013. All rights reserved.</div>
 			<#include "m-common/menu.ftl"/>
 		</div>
 		<script>
 			var pageNo=2;//初始化页面
+			var is_scroll=true;
 			window.onscroll=function(){　　　
 			        var tops =    $(document).scrollTop(); //获取滚动条的位置
 			        var sctop = $(document).height()-$(window).height(); //屏幕高度
@@ -63,7 +62,8 @@
 			        
 			        if(tops>=sctop)//成立说明滚动条已在最底部
 			        {
-			        	
+			       	   if(is_scroll){
+			       	   is_scroll=false;
 			           //获取后台json数据
 			           $.ajax({
 				            data : $('#panel_comp_basic_form').serialize(),
@@ -74,27 +74,38 @@
 				            	type:id,
 				            	pageNo:pageNo
 				            },
+				            beforeSend:function(){
+				                if($(".loading").length>0){
+				            	 	$(".loading").remove();
+				            	}
+				           		
+				           		$("#content").append("<div style='text-align: center' class='loading'><img src='m/m-images/loading.gif'/></div>");
+				           		$(".load_refresh").hide();
+				            },
 				            success : function(data) {
-				                if (data.success == true ||data.success == 'true') {
-				                	pageNo=data.pageNo+1; //显示最新页码
-				                    for(var i=0;i<data.typeItem.length;i++){
-				                        var obj=data.typeItem[i];
-					                	var htm="<div class='columns twelve'>";
-					                	htm+="<a href='/i/97299.html' title='"+obj.title+"'>";
-					                	if(obj.title.length>24){
-					                		htm+=obj.title.substring(0,24)+"..";
-					                	}else{
-					                		htm+=obj.title;
-					                	}
-					                	htm+="</a></div><hr>";
-					                	$("#content").append(htm);
-				                	 }
-				                }else{
-				                	//$("#content").append("<p style='text-align:center;'>已经到底</p>");
-				                }
+				            	 	setTimeout(function(){
+						            			if($(".loading").length>0){$(".loading").remove();}
+								                if (data.success == true ||data.success == 'true') {
+								                	pageNo=data.pageNo+1; //显示最新页码
+								                    for(var i=0;i<data.typeItem.length;i++){
+								                        var obj=data.typeItem[i];
+									                	var htm="<div class='columns twelve' style='overflow:hidden;white-space:nowrap;text-overflow: ellipsis;'>";
+									                	htm+="<a href='/i/97299.html' title='"+obj.title+"'>";
+									                	htm+=obj.title;
+									                	htm+="</a></div><hr>";
+									                	$("#content").append(htm);
+									                	 $(".load_refresh").show();
+								                	 }
+								                }else{
+								                	$("#content").after('<div style="height:50px;line-height:50px;text-align:center;">已无数据</div>');
+								                }
+								          is_scroll=true; 
+						               }
+					                ,800);
 				            }
 				        });
 				       $(".totop").show();
+				       }
 			        }
 			};
 		</script>

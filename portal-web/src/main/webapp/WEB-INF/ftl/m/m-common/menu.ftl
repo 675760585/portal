@@ -24,7 +24,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="m-sort?type=">
+						<a href="#" >
 							<i class="i-shortcodes i-small"></i>分类
 						</a>
 						<ul id="m-sort">

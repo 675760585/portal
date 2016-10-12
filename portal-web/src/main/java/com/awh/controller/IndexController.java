@@ -127,7 +127,7 @@ public class IndexController extends BaseController {
 	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-sort")
 	public ModelAndView  msort(@RequestParam String type) throws UnsupportedEncodingException {
 		ModelAndView view=new ModelAndView("m/sort");
-		Page pages=new Page(5);
+		Page pages=new Page();
 		Map<String,Object> param=new HashMap<String,Object>();
 		if(!StringUtils.isEmpty(type)){
 			param.put("type",MovieTypeEnums.getByValue(type).getView());
@@ -185,6 +185,17 @@ public class IndexController extends BaseController {
 	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-comments")
 	public ModelAndView  mcomments() {
 		return new ModelAndView("m/comments");
+	}
+	
+	/**
+	 * m站-电影详情
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-movie-details")
+	public ModelAndView  movie_details(@RequestParam int id) {
+		
+		
+		return new ModelAndView("m/blog-single-post");
 	}
 	
 }

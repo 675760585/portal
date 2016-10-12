@@ -1,3 +1,4 @@
+<#assign base=request.contextPath />
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 	<head>
@@ -5,6 +6,7 @@
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
+		<base href="${base}/" /> 
 		<title>就这样-爱电影</title>
 		<link href="m/m-images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 

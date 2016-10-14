@@ -163,7 +163,7 @@ pre
 	}
 }
 
-#Logo { height: 41px; display: inline-block; padding-top: 10px; line-height: 40px; }
+#Logo { height: 41px; display: inline-block; padding-top: 10px;  }
 #Logo.svg { padding:0px; }
 #Logo.svg img { max-height: 70px; top: -9px; position: relative; }
 #Logo img { max-height:40px; }

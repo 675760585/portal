@@ -30,6 +30,11 @@ public class MovieServiceImpl implements MovieService{
 		return page;
 	}
 
+	@Override
+	public TmovieWithBLOBs selectByPrimaryKey(Integer id) {
+		return tmovieMapper.selectByPrimaryKey(id);
+	}
+
 	
 //	public TmovieWithBLOBs selectByPrimaryKey(Integer id){
 //		

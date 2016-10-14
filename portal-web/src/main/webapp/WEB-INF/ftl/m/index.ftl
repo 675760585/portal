@@ -1,3 +1,5 @@
+<#assign base=request.contextPath />
+<#setting number_format="#">
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 	<head>
@@ -5,7 +7,8 @@
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
         
-		<title>就这样-爱电影</title>
+        <base href="${base}/" /> 
+		<title>电影PP</title>
 		<link href="m/m-m/m-images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 		<link type="text/css" rel="stylesheet" href="m/m-css/flexslider.css" />
@@ -24,7 +27,7 @@
 			<div id="header">
 				<a href="#menu"></a>
 				<span id="Logo" class="svg">
-					就这样-爱电影
+					电影PP
 				</span>
 				<a class="backBtn" href="javascript:history.back();"></a>
 			</div>
@@ -89,28 +92,21 @@
 			
 			
 			
-				  <h3 class="title">新片精品 <a href="" style="float:right;font-size:12px;">更多</a></h3>
-				    	<div class="columns twelve">
-									<a href="/i/97223.html" title="2016年国产7.2分动作片《赏金猎人》BD国粤双语中字">2016年国产7.2分动作片《赏金猎人》BD国粤双语中字</a>		
-								</div>
-				  <hr>
-				  <div class="columns twelve">
-									<a href="/i/97299.html" title="2016年国产6.6分动画片《大鱼海棠》BD国语中字">2016年国产6.6分动画片《大鱼海棠》BD国语中字</a>
-								</div>
-				  <hr>
-				  <div class="columns twelve">
-									<a href="/i/97297.html" title="2016年香港张家辉古天乐犯罪片《使徒行者电影版》BD国语中字">2016年香港张家辉古天乐犯罪片《使徒行者电影版》BD</a>
-								</div>
-				  <hr>
-				  <div class="columns twelve">
-									<a href="/i/97295.html" title="2016年舒淇冯绍峰爱情片《我最好朋友的婚礼中国版》HD中英双字">2016年舒淇冯绍峰爱情片《我最好朋友的婚礼中国版》</a>
-								</div>
-				  <hr>
-				  <div class="columns twelve">
-									<a href="/i/97294.html" title="2016年美国7.5分科幻片《星际迷航3：超越星辰》BD中英双字">2016年美国7.5分科幻片《星际迷航3：超越星辰》</a>
-								</div>
+				  <h3 class="title">新片精品 <a href="m-sort?type=" style="float:right;font-size:12px;">更多</a></h3>
 				  
-				  <br/>
+				  	<#if (items?? && items?size>0) >
+						<#list items as item>
+				    	<div class="columns twelve" style="overflow:hidden;white-space:nowrap;text-overflow: ellipsis;">
+									<a href="m-movie-details?id=${item.id!}" title="${item.title!}">
+										${item_index}${item.title!}
+									</a>	
+						</div>
+						
+						<#if item_index+1 != items?size>
+				  			<hr>
+				  		</#if>
+					  </#list>
+					</#if>
 			</div>
 
 
@@ -118,43 +114,43 @@
 				搜索我们的网站
 			</div>
 			
-			<div class="exploreSiteFullPane">
+			<div class="exploreSiteFullPane" >
 				
-				<a href="#" class="explorePane active">
+				<a href="index" class="explorePane active">
 					<span class="i-pane i-blue">
 						<i class="i-home"></i>
 					</span>
-					<h4>首页</h4>
+					<h4 style="font-size:12px;">首页</h4>
 				</a>
-				<a href="about.html" class="explorePane middle">
+				<a href="m-about" class="explorePane middle">
 					<span class="i-pane i-blue">
 						<i class="i-about"></i>
 					</span>
-					<h4>关于</h4>
+					<h4 style="font-size:12px;">关于</h4>
 				</a>
-				<a href="blog.html" class="explorePane">
+				<a href="m-news" class="explorePane">
 					<span class="i-pane i-blue">
 						<i class="i-blog"></i>
 					</span>
-					<h4>影讯</h4>
+					<h4 style="font-size:12px;">影讯</h4>
 				</a>
-				<a href="gallery.html" class="explorePane">
+				<a href="m-sort?type=" class="explorePane">
 					<span class="i-pane i-blue">
 						<i class="i-shortcodes"></i>
 					</span>
-					<h4>分类</h4>
+					<h4 style="font-size:12px;">分类</h4>
 				</a>
-				<a href="shortcodes.html" class="explorePane middle">
+				<a href="m-share" class="explorePane middle">
 					<span class="i-pane i-blue">
 						<i class="i-gallery"></i>
 					</span>
-					<h4>分享</h4>
+					<h4 style="font-size:12px;">分享</h4>
 				</a>
-				<a href="contact.html" class="explorePane">
+				<a href="m-comments" class="explorePane">
 					<span class="i-pane i-blue">
 						<i class="i-contact"></i>
 					</span>
-					<h4>留言</h4>
+					<h4 style="font-size:12px;">留言</h4>
 				</a>
 			</div>
 			

@@ -9,7 +9,7 @@
 			<nav id="menu">
 				<ul>
 					<li class="Selected">
-						<a href="m-index">
+						<a href="index">
 							<i class="i-home i-small"></i>首页
 						</a>
 					</li>
@@ -24,7 +24,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" >
+						<a href="m-sort?type=" >
 							<i class="i-shortcodes i-small"></i>分类
 						</a>
 						<ul id="m-sort">

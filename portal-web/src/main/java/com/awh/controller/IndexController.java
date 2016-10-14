@@ -2,6 +2,7 @@ package com.awh.controller;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.alibaba.fastjson.JSON;
 import com.awh.enums.MovieTypeEnums;
 
 @Controller
@@ -29,17 +32,16 @@ public class IndexController extends BaseController {
 	private MovieService movieService;
 	
 	/**
-	 * web-首页
+	 * m-首页
 	 * @return
 	 */
 	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/index")
 	public ModelAndView  index() {
-//		List<Users> list=userService.queryAllUser();
-//		for(Users user:list){
-//			System.out.println("用户名称:"+user.getLoginname());
-//		}
-//		return new ModelAndView("index", "lists", list); 
-		return new ModelAndView("index");
+		ModelAndView view=new ModelAndView("m/index");
+		Page pages=new Page();
+		Page<TmovieWithBLOBs> page=movieService.selectPageMovie(pages);
+		view.addObject("items", page.getResults());
+		return view;
 	}
 	
 	
@@ -154,14 +156,16 @@ public class IndexController extends BaseController {
 		pages.setPageNo(pageNo);  //设置页码
 		
 		Map<String,Object> param=new HashMap<String,Object>();
-		param.put("type",MovieTypeEnums.getByValue(type).getView());
+		if(!StringUtils.isEmpty(type)){
+			param.put("type",MovieTypeEnums.getByValue(type).getView());
+			map.put("code", type);
+		}
+		
 		pages.setParams(param);
 		Page<TmovieWithBLOBs> page=movieService.selectPageMovie(pages);
-		
-		map.put("code", type);
 		map.put("pageNo", pageNo);
 		map.put("typeItem", page.getResults());
-		if(page.getResults()==null &&page.getResults().size()==0){
+		if(page.getResults()==null || page.getResults().size()==0){
 			map.put("success","false");
 		}else{
 			map.put("success","true");
@@ -193,9 +197,20 @@ public class IndexController extends BaseController {
 	 */
 	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/m-movie-details")
 	public ModelAndView  movie_details(@RequestParam int id) {
+		ModelAndView mv=new ModelAndView("m/blog-single-post");
+		TmovieWithBLOBs dto=movieService.selectByPrimaryKey(id);
+		if(dto!=null && !StringUtils.isEmpty(dto.getTitle())){
+			String title=dto.getTitle().substring(dto.getTitle().indexOf("《")+1, dto.getTitle().lastIndexOf("》"));
+			dto.setTitle(title);
+			
+		}
 		
-		
-		return new ModelAndView("m/blog-single-post");
+		if(dto!=null && !StringUtils.isEmpty(dto.getUrls())){
+			List list=JSON.parseArray(dto.getUrls());
+			mv.addObject("urls",list);
+		}
+	    mv.addObject("movie", dto);
+		return mv;
 	}
 	
 }

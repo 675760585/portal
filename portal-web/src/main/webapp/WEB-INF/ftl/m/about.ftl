@@ -138,43 +138,43 @@
 				搜索我们的网站
 			</div>
 			
-			<div class="exploreSiteFullPane">
+			<div class="exploreSiteFullPane" >
 				
-				<a href="#" class="explorePane active">
+				<a href="index" class="explorePane active">
 					<span class="i-pane i-blue">
 						<i class="i-home"></i>
 					</span>
-					<h4>首页</h4>
+					<h4 style="font-size:12px;">首页</h4>
 				</a>
-				<a href="about.html" class="explorePane middle">
+				<a href="m-about" class="explorePane middle">
 					<span class="i-pane i-blue">
 						<i class="i-about"></i>
 					</span>
-					<h4>关于</h4>
+					<h4 style="font-size:12px;">关于</h4>
 				</a>
-				<a href="blog.html" class="explorePane">
+				<a href="m-news" class="explorePane">
 					<span class="i-pane i-blue">
 						<i class="i-blog"></i>
 					</span>
-					<h4>影讯</h4>
+					<h4 style="font-size:12px;">影讯</h4>
 				</a>
-				<a href="gallery.html" class="explorePane">
+				<a href="m-sort?type=" class="explorePane">
 					<span class="i-pane i-blue">
 						<i class="i-shortcodes"></i>
 					</span>
-					<h4>分类</h4>
+					<h4 style="font-size:12px;">分类</h4>
 				</a>
-				<a href="shortcodes.html" class="explorePane middle">
+				<a href="m-share" class="explorePane middle">
 					<span class="i-pane i-blue">
 						<i class="i-gallery"></i>
 					</span>
-					<h4>分享</h4>
+					<h4 style="font-size:12px;">分享</h4>
 				</a>
-				<a href="contact.html" class="explorePane">
+				<a href="m-comments" class="explorePane">
 					<span class="i-pane i-blue">
 						<i class="i-contact"></i>
 					</span>
-					<h4>留言</h4>
+					<h4 style="font-size:12px;">留言</h4>
 				</a>
 			</div>
 			

@@ -1,3 +1,5 @@
+<#assign base=request.contextPath />
+<#setting number_format="#">
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 	<head>
@@ -5,6 +7,7 @@
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
+		<base href="${base}/" /> 
 		<title>就这样-爱电影</title>
 		<link href="m/m-images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
@@ -34,8 +37,8 @@
 					<#list movieItem as item>
 						<article>
 							<img src="${item.img!}" />
-							<h2><a href="blog-single-post.html">${item.title!}</a></h2>
-							<p>
+							<h4><a href="m-movie-details?id=${item.id!}" style="font-size: 1em;font-weight: 400;color: #1e9c95 !important;">${item.title!}</a></h4>
+							<p style="font-size: 0.9em;font-weight: 400;color: #555;">
 								&nbsp;&nbsp;${item.summary!}
 							</p>
 							<div class="a-meta">

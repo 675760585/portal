@@ -1,4 +1,5 @@
 <#assign base=request.contextPath />
+<#setting number_format="#">
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
 	<head>
@@ -7,7 +8,7 @@
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 		
 		<base href="${base}/" /> 
-		<title>就这样-爱电影</title>
+		<title>movie-pp</title>
 		<link href="m/m-images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 		<link type="text/css" rel="stylesheet" href="m/m-css/style.css" />
@@ -37,8 +38,8 @@
 				<#if (typeItem?? && typeItem?size>0) >
 					<#list typeItem as item>
 						 <div class="columns twelve" style="overflow:hidden;white-space:nowrap;text-overflow: ellipsis;">
-									<a href="/i/97299.html" title="${item.title!}">
-										${item.title!}
+									<a href="m-movie-details?id=${item.id!}" title="${item.title!}">
+									${item.title!}
 									</a>
 						 </div>
 				  		 <hr>
@@ -58,7 +59,7 @@
 			window.onscroll=function(){　　　
 			        var tops =    $(document).scrollTop(); //获取滚动条的位置
 			        var sctop = $(document).height()-$(window).height(); //屏幕高度
-			        var id = ${code!};
+			        var id = ${code!'""'};
 			        
 			        if(tops>=sctop)//成立说明滚动条已在最底部
 			        {
@@ -78,26 +79,37 @@
 				                if($(".loading").length>0){
 				            	 	$(".loading").remove();
 				            	}
+				            	if($(".no_data").length>0){
+								                    	$(".no_data").remove();
+								}
 				           		
-				           		$("#content").append("<div style='text-align: center' class='loading'><img src='m/m-images/loading.gif'/></div>");
+				           		$("#content").append("<div style='text-align: center;height:50px;' class='loading'><img src='m/m-images/loading1.gif'/></div>");
 				           		$(".load_refresh").hide();
 				            },
 				            success : function(data) {
 				            	 	setTimeout(function(){
 						            			if($(".loading").length>0){$(".loading").remove();}
+						            			if($(".no_data").length>0){
+								                    	$(".no_data").remove();
+												}
 								                if (data.success == true ||data.success == 'true') {
 								                	pageNo=data.pageNo+1; //显示最新页码
 								                    for(var i=0;i<data.typeItem.length;i++){
 								                        var obj=data.typeItem[i];
 									                	var htm="<div class='columns twelve' style='overflow:hidden;white-space:nowrap;text-overflow: ellipsis;'>";
-									                	htm+="<a href='/i/97299.html' title='"+obj.title+"'>";
+									                	htm+="<a href='m-movie-details?id="+obj.id+"' title='"+obj.title+"'>";
 									                	htm+=obj.title;
 									                	htm+="</a></div><hr>";
 									                	$("#content").append(htm);
 									                	 $(".load_refresh").show();
 								                	 }
 								                }else{
-								                	$("#content").after('<div style="height:50px;line-height:50px;text-align:center;">已无数据</div>');
+								                    if($(".no_data").length>0){
+								                    	$(".no_data").remove();
+								                    }
+								                    if($(".loading").length>0){$(".loading").remove();}
+								                	$("#content").after('<div style="height:30px;line-height:30px;text-align:center;" class="no_data">已无数据</div>');
+								                	
 								                }
 								          is_scroll=true; 
 						               }

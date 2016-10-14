@@ -18,4 +18,6 @@ public interface MovieService {
 	
 	public Page<TmovieWithBLOBs> selectPageMovie(Page page);
 	
+	public TmovieWithBLOBs selectByPrimaryKey(Integer id);
+	
 }

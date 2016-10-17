@@ -62,6 +62,11 @@
 			<div class="subFooter">Copyright 2013. All rights reserved.</div>
 			
 			<#include "m-common/menu.ftl"/>
+			<script>
+				$(function(){
+						$(".s-comments").addClass("mm-selected");
+				})
+			</script>
 		</div>
 	</body>
 </html>

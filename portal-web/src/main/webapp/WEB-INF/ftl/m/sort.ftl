@@ -52,6 +52,11 @@
 			<a href='#' onclick='gotoTop();return false;' class='totop' style='display:none'></a>
 			<div class="subFooter">Copyright 2013. All rights reserved.</div>
 			<#include "m-common/menu.ftl"/>
+			<script>
+				$(function(){
+						$(".s-sort").addClass("mm-selected");
+				})
+			</script>
 		</div>
 		<script>
 			var pageNo=2;//初始化页面

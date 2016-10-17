@@ -166,7 +166,11 @@
 			</div>
 			
 			<#include "m-common/menu.ftl"/>
-			
+			<script>
+				$(function(){
+						$(".s-home").addClass("mm-selected");
+				})
+			</script>
 		</div>
 	</body>
 </html>

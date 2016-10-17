@@ -5,7 +5,7 @@
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
-		<title>就这样-爱电影</title>
+		<title>电影pp</title>
 		<link href="m/m-images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 		<link type="text/css" rel="stylesheet" href="m/m-css/style.css" />
@@ -23,7 +23,7 @@
 			<div id="header">
 				<a href="#menu"></a>
 				<span id="Logo" class="svg">
-					就这样-爱电影
+					Movie pp
 				</span>
 				<a class="backBtn" href="javascript:history.back();"></a>
 			</div>
@@ -140,13 +140,13 @@
 			
 			<div class="exploreSiteFullPane" >
 				
-				<a href="index" class="explorePane active">
+				<a href="index" class="explorePane">
 					<span class="i-pane i-blue">
 						<i class="i-home"></i>
 					</span>
 					<h4 style="font-size:12px;">首页</h4>
 				</a>
-				<a href="m-about" class="explorePane middle">
+				<a href="m-about" class="explorePane active middle">
 					<span class="i-pane i-blue">
 						<i class="i-about"></i>
 					</span>
@@ -179,6 +179,11 @@
 			</div>
 			
 			<#include "m-common/menu.ftl"/>
+			<script>
+				$(function(){
+						$(".s-about").addClass("mm-selected");
+				})
+			</script>
 		</div>
 	</body>
 </html>

@@ -143,6 +143,11 @@
 			</div>
 			<div class="subFooter">Copyright 2013. All rights reserved.</div>
 			<#include "m-common/menu.ftl"/>
+			<script>
+				$(function(){
+						$(".s-share").addClass("mm-selected");
+				})
+			</script>
 		</div>
 		<script>
 			$(function(){

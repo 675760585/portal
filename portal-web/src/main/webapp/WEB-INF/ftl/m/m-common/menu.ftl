@@ -8,22 +8,22 @@
 
 			<nav id="menu">
 				<ul>
-					<li class="Selected">
+					<li class="s-home">
 						<a href="index">
 							<i class="i-home i-small"></i>首页
 						</a>
 					</li>
-					<li>
+					<li class="s-about">
 						<a href="m-about">
 							<i class="i-about i-small"></i>关于
 						</a>
 					</li>
-					<li>
+					<li class="s-news">
 						<a href="m-news">
 							<i class="i-blog  i-small"></i>最新影讯
 						</a>
 					</li>
-					<li>
+					<li class="s-sort">
 						<a href="m-sort?type=" >
 							<i class="i-shortcodes i-small"></i>分类
 						</a>
@@ -55,12 +55,12 @@
 							
 						</script>
 					</li>
-					<li>
+					<li class="s-share">
 						<a href="m-share">
 							<i class="i-gallery  i-small"></i>分享
 						</a>
 					</li>
-					<li>
+					<li class="s-comments">
 						<a href="m-comments">
 							<i class="i-contact i-small"></i>留言板
 						</a>

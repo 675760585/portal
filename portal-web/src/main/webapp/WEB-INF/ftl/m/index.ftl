@@ -98,7 +98,7 @@
 						<#list items as item>
 				    	<div class="columns twelve" style="overflow:hidden;white-space:nowrap;text-overflow: ellipsis;">
 									<a href="m-movie-details?id=${item.id!}" title="${item.title!}">
-										${item.title!}
+									${item.title!}
 									</a>	
 						</div>
 						

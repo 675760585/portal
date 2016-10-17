@@ -31,19 +31,7 @@ public class IndexController extends BaseController {
 	@Autowired
 	private MovieService movieService;
 	
-	/**
-	 * m-首页
-	 * @return
-	 */
-	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/index")
-	public ModelAndView  index() {
-		ModelAndView view=new ModelAndView("m/index");
-		Page pages=new Page();
-		Page<TmovieWithBLOBs> page=movieService.selectPageMovie(pages);
-		view.addObject("items", page.getResults());
-		return view;
-	}
-	
+
 	
 	
 	
@@ -92,6 +80,20 @@ public class IndexController extends BaseController {
 	public ModelAndView movie(){
 		return new ModelAndView("movie");
 	}
+	
+	/**
+	 * m-首页
+	 * @return
+	 */
+	@RequestMapping(method={RequestMethod.POST,RequestMethod.GET}, value="/index")
+	public ModelAndView  index() {
+		ModelAndView view=new ModelAndView("m/index");
+		Page pages=new Page();
+		Page<TmovieWithBLOBs> page=movieService.selectPageMovie(pages);
+		view.addObject("items", page.getResults());
+		return view;
+	}
+	
 	
 	/**
 	 * m站-首页

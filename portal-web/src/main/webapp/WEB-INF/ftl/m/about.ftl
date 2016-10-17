@@ -23,7 +23,7 @@
 			<div id="header">
 				<a href="#menu"></a>
 				<span id="Logo" class="svg">
-					Movie pp
+					电影PP
 				</span>
 				<a class="backBtn" href="javascript:history.back();"></a>
 			</div>

@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 
 		<base href="${base}/" /> 
-		<title>就这样-爱电影</title>
+		<title>电影PP</title>
 		<link href="m/m-images/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 		<link type="text/css" rel="stylesheet" href="m/m-css/style.css" />
@@ -26,7 +26,7 @@
 			<div id="header">
 				<a href="#menu"></a>
 				<span id="Logo" class="svg">
-					就这样-爱电影
+					电影PP
 				</span>
 				<a class="backBtn" href="javascript:history.back();"></a>
 			</div>
